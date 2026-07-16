@@ -259,52 +259,15 @@ button:focus-visible {
   }
 }
 
-/* Fractal hero motif — dendrite-like branching mesh spanning the whole hero.
-   Each generation grows in from the trunk outward, holds, fades, and loops —
-   the "silky" continuous-motion quality is the takeaway from the Silk Aurora
-   reference; the visual language (navy/sage line art) stays the site's own. */
+/* Subtle Neural Noise Canvas background covering the hero section */
 .hero__motif {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.22;
+  opacity: 0.35;
   pointer-events: none;
-}
-
-.frac-line {
-  stroke-dasharray: var(--len);
-  stroke-dashoffset: var(--len);
-  animation: frac-grow-line 13s ease-in-out infinite;
-  animation-delay: var(--delay, 0s);
-}
-
-.frac-node {
-  transform-box: fill-box;
-  transform-origin: center;
-  opacity: 0;
-  animation: frac-grow-node 13s ease-in-out infinite;
-  animation-delay: var(--delay, 0s);
-}
-
-.frac-node--sage { fill: var(--color-sage); }
-
-@keyframes frac-grow-line {
-  0% { stroke-dashoffset: var(--len); opacity: 0; }
-  10% { opacity: 1; }
-  28% { stroke-dashoffset: 0; opacity: 1; }
-  65% { stroke-dashoffset: 0; opacity: 1; }
-  85% { opacity: 0; }
-  100% { stroke-dashoffset: var(--len); opacity: 0; }
-}
-
-@keyframes frac-grow-node {
-  0%, 8% { opacity: 0; transform: scale(0.4); }
-  20% { opacity: 1; transform: scale(1.15); }
-  30% { transform: scale(1); }
-  65% { opacity: 1; transform: scale(1); }
-  85% { opacity: 0; transform: scale(0.6); }
-  100% { opacity: 0; transform: scale(0.4); }
+  z-index: 0;
 }
 
 .hero__inner {
