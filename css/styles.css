@@ -700,3 +700,206 @@ button:focus-visible {
   white-space: nowrap;
   border: 0;
 }
+
+/* Real Hero Layout Styles matching henschelneurology.com layout */
+.hero-section {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.hero-content {
+  padding: 2rem 0;
+  z-index: 2;
+  position: relative;
+  max-width: 720px;
+}
+.hero-panel h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--color-ink);
+}
+.hero-positioning {
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  font-weight: 500;
+  color: var(--color-ink-soft);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.hero-supporting {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: var(--color-ink-soft);
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.hero-ctas .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-ink);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+.hero-ctas .btn-primary:hover {
+  background: var(--color-sage-deep);
+}
+.hero-ctas .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--color-ink);
+  border: 1px solid var(--color-ink);
+  font-weight: 600;
+  padding: 0.9rem 1.8rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.25s ease;
+}
+.hero-ctas .btn-secondary:hover {
+  background: rgba(22, 32, 43, 0.05);
+}
+.hero-availability {
+  font-size: 0.8rem;
+  color: var(--color-placeholder-text);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.hero-availability:before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-sage);
+  border-radius: 50%;
+}
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 70svh;
+  border-radius: var(--radius-glass);
+  border: 1px solid var(--glass-light-border);
+  box-shadow: 0 24px 48px -20px rgba(22, 32, 43, 0.25), inset 0 1px 0 var(--glass-light-sheen);
+}
+
+/* Trust Rail */
+.trust-rail {
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+.trust-rail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.trust-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-left: 1px solid var(--color-border);
+}
+.trust-item:first-child {
+  border-left: none;
+}
+.trust-icon-wrapper {
+  color: var(--color-sage);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trust-icon {
+  width: 32px;
+  height: 32px;
+}
+.trust-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.trust-item-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-sage-deep);
+}
+.trust-item-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-ctas {
+    justify-content: center;
+  }
+  .hero-availability {
+    justify-content: center;
+  }
+  .hero-image-wrapper {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .trust-item {
+    border-left: none;
+    justify-content: center;
+  }
+}
