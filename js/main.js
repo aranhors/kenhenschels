@@ -128,7 +128,7 @@
 
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(79, 138, 111, 0.16)"; // --color-sage at 16% opacity
+      ctx.fillStyle = "rgba(102, 168, 139, 0.28)"; // --color-sage-on-dark at 28% opacity
       ctx.fill();
     });
 
@@ -145,8 +145,8 @@
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(p2.x, p2.y);
-          var alpha = (1 - dist / 100) * 0.09;
-          ctx.strokeStyle = "rgba(79, 138, 111, " + alpha + ")";
+          var alpha = (1 - dist / 100) * 0.15;
+          ctx.strokeStyle = "rgba(102, 168, 139, " + alpha + ")";
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
@@ -161,8 +161,8 @@
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(mouse.x, mouse.y);
-          var alpha = (1 - dist / mouse.radius) * 0.12;
-          ctx.strokeStyle = "rgba(79, 138, 111, " + alpha + ")";
+          var alpha = (1 - dist / mouse.radius) * 0.22;
+          ctx.strokeStyle = "rgba(102, 168, 139, " + alpha + ")";
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }

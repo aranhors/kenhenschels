@@ -710,23 +710,23 @@ button:focus-visible {
   overflow: hidden;
   padding-top: 100px;
   padding-bottom: 60px;
+  background: linear-gradient(rgba(15, 25, 36, 0.72), rgba(15, 25, 36, 0.78)), url('../images/ken-hero-wide.png') no-repeat center center / cover;
 }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 58% 42%;
+.hero-container-centered {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
-  align-items: center;
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: flex-start;
 }
 .hero-content {
   padding: 2rem 0;
   z-index: 2;
   position: relative;
-  max-width: 720px;
+  max-width: 680px;
 }
 .hero-panel h1 {
   font-family: var(--font-serif);
@@ -734,18 +734,15 @@ button:focus-visible {
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: var(--color-ink);
 }
 .hero-positioning {
   font-size: clamp(1.15rem, 2.2vw, 1.4rem);
   font-weight: 500;
-  color: var(--color-ink-soft);
   margin-bottom: 1rem;
   line-height: 1.4;
 }
 .hero-supporting {
   font-size: clamp(1rem, 1.8vw, 1.15rem);
-  color: var(--color-ink-soft);
   margin-bottom: 2.5rem;
   line-height: 1.5;
 }
@@ -770,6 +767,13 @@ button:focus-visible {
 .hero-ctas .btn-primary:hover {
   background: var(--color-sage-deep);
 }
+.hero-ctas .btn-primary--white {
+  background: #fff;
+  color: var(--color-ink);
+}
+.hero-ctas .btn-primary--white:hover {
+  background: var(--color-sage-tint);
+}
 .hero-ctas .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -786,6 +790,14 @@ button:focus-visible {
 .hero-ctas .btn-secondary:hover {
   background: rgba(22, 32, 43, 0.05);
 }
+.hero-ctas .btn-secondary--white {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.hero-ctas .btn-secondary--white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
 .hero-availability {
   font-size: 0.8rem;
   color: var(--color-placeholder-text);
@@ -800,6 +812,12 @@ button:focus-visible {
   height: 6px;
   background-color: var(--color-sage);
   border-radius: 50%;
+}
+.text-white {
+  color: #fff !important;
+}
+.text-white-soft {
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 .hero-image-wrapper {
   position: relative;
